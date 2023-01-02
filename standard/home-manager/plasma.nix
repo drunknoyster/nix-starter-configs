@@ -1,3 +1,4 @@
+{ inputs, outputs, lib, config, pkgs, ... }: {
 services.xserver = {
   displayManager.sddm.enable = true;
   desktopManager = {
@@ -9,4 +10,5 @@ services.xserver = {
       ];
     };
   };
+};
 }

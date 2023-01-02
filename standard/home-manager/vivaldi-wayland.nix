@@ -1,4 +1,4 @@
-{
+{ inputs, outputs, lib, config, pkgs, ... }: {
 programs
  vivaldi = {
     commandLineArgs = [
