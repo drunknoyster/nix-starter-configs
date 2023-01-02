@@ -39,8 +39,31 @@
     config = {
       # Disable if you don't want unfree packages
       allowUnfree = true;
+      packageOverrides = pkgs: {
+        steam = pkgs.steam.override {
+          extraPkgs = pkgs: with pkgs; [
+            xorg.libXcursor
+            xorg.libXi
+            xorg.libXinerama
+            xorg.libXScrnSaver
+            libpng
+            libpulseaudio
+            libvorbis
+            stdenv.cc.cc.lib
+            libkrb5
+            keyutils
+          ]
+        }
+      }
     };
   };
+
+  # Enable neovim as system editor
+  environment.variables.EDITOR = "nvim";
+
+  environment.systemPackages = with pkgs; [
+    wget openrazer-daemon polychromatic nvidia-vaapi-driver libva1 libvdpau-va-gl driversi686Linux.libvdpau-va-gl
+  ];
 
   nix = {
     # This will add each flake input as a registry
@@ -59,28 +82,59 @@
     };
   };
 
+  # Enable Flatpak support
+  services.flatpak.enable = true;
+
   # FIXME: Add the rest of your current configuration
 
   # TODO: Set your hostname
-  networking.hostName = "your-hostname";
+  networking.hostName = "nixos";
+  
+  # Enable networking
+  networking.networkmanager.enable = true;
 
   # TODO: This is just an example, be sure to use whatever bootloader you prefer
   boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+
+  # Select and install a linux kernel
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+  
+  # Enable ZFS Services
+  #services.zfs.autoScrub.enable = true;
+  #services.zfs.trim.enable = true;
+
+  # Enable Bluetooth Support
+  hardware.bluetooth.enable = true;
+
+    # Enable Pipewire
+    # rtkit is optional but recommended
+  security.rtkit.enable = true;
+    services.pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      # If you want to use JACK applications, uncomment this:
+      #jack.enable = true;
+    };
+  hardware.pulseaudio.enable = false;
 
   # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {
     # FIXME: Replace with your username
-    your-username = {
+    drunknoyster = {
       # TODO: You can set an initial password for your user.
       # If you do, you can skip setting a root password by passing '--no-root-passwd' to nixos-install.
       # Be sure to change it (using passwd) after rebooting!
-      initialPassword = "correcthorsebatterystaple";
+      initialPassword = "password";
       isNormalUser = true;
       openssh.authorizedKeys.keys = [
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
       ];
       # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
-      extraGroups = [ "wheel" ];
+      extraGroups = [ "wheel" "networkmanager" "audio" "plugdev" "video" "udev" "openrazer" "scanner" ];
     };
   };
 
@@ -95,5 +149,5 @@
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  system.stateVersion = "22.11";
+  system.stateVersion = "23.05";
 }
