@@ -52,7 +52,7 @@
     homeDirectory = "/home/drunknoyster";
     package = with pkgs; [
       steamtinkerlaunch
-    ]
+    ];
   };
 
   # Add stuff for your user as you see fit:

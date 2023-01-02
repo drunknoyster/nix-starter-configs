@@ -1,3 +1,4 @@
+{
 programs.hyprland = { # or wayland.windowManager.hyprland
   enable = true;
   xwayland = {
@@ -5,4 +6,5 @@ programs.hyprland = { # or wayland.windowManager.hyprland
     hidpi = true;
   };
   nvidiaPatches = true;
-};
+ };
+}

@@ -1,3 +1,4 @@
+{
 programs
  vivaldi = {
     commandLineArgs = [
@@ -7,4 +8,5 @@ programs
         "--ozone-platform=wayland"
         "--disable-features=UseChromeOSDirectVideoDecoder"
     ];
- }
+ };
+} 

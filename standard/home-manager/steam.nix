@@ -1,3 +1,4 @@
+{
 programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
@@ -9,4 +10,5 @@ environment.sessionVariables = rec {
 environment.systemPackages = with pkgs; [
     gamescope
     gamemode
-]
+];
+}
