@@ -3,6 +3,5 @@
 
 {
   # List your module files here
-  # my-module = import ./my-module.nix;
-  hyprland = import ./hyprland.nix;
+  # my-module = import ./my-module.nix;  
 }

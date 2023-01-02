@@ -1,3 +1,4 @@
+{ config, pkgs, lib, ... }: {
 services.xserver = {
   displayManager.gdm.enable = true;
   desktopManager = {
@@ -19,4 +20,5 @@ services.xserver = {
         ]);
     };
   };
+};
 }

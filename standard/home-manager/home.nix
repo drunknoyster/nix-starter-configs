@@ -6,18 +6,15 @@
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
      #outputs.homeManagerModules.example
-    #./gnome.nix
-    ./neovim.nix
-    ./openrazer.nix
-    #./plasma.nix
-    ./steam.nix
-    ./hyprland-config.nix
-    ./vivaldi-wayland./nix
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
+    #./gnome.nix
+    ./neovim.nix
+    ./hyprland-config.nix
+    ./vivaldiwayland.nix
   ];
 
   nixpkgs = {
@@ -50,8 +47,8 @@
   home = {
     username = "drunknoyster";
     homeDirectory = "/home/drunknoyster";
-    package = with pkgs; [
-      steamtinkerlaunch
+    packages = with pkgs; [
+      steamtinkerlaunch 
     ];
   };
 

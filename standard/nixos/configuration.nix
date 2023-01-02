@@ -6,7 +6,12 @@
   imports = [
     # If you want to use modules your own flake exports (from modules/nixos):
     # outputs.nixosModules.example
-
+    outputs.nixosModules.nvidia
+    outputs.nixosModules.steam
+    outputs.nixosModules.hyprland
+    outputs.nixosModules.openrazer
+    #outputs.nixosModules.plasma
+    #outputs.nixosModules.gnome
     # Or modules from other flakes (such as nixos-hardware):
     # inputs.hardware.nixosModules.common-cpu-amd
     # inputs.hardware.nixosModules.common-ssd
@@ -62,7 +67,7 @@
   environment.variables.EDITOR = "nvim";
 
   environment.systemPackages = with pkgs; [
-    wget openrazer-daemon polychromatic nvidia-vaapi-driver libva1 libvdpau-va-gl driversi686Linux.libvdpau-va-gl
+    git wget openrazer-daemon polychromatic nvidia-vaapi-driver libva1 libvdpau-va-gl driversi686Linux.libvdpau-va-gl
   ];
 
   nix = {
