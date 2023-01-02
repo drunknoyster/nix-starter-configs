@@ -15,15 +15,15 @@ in
     modesetting.enable = true;
     package = nvidiaPackage;
     powerManagement.enable = false;
-   }
+   };
    hardware.opengl = {
     enable = true;
     driSupport = true;
     driSupport32Bit = true;
-   }
+   };
    services.xserver = {
     enable = true;
     videoDrivers = [ "nvidia" ];
-   }
-  }
+   };
+  };
 }
