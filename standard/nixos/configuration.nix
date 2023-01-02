@@ -52,9 +52,9 @@
             stdenv.cc.cc.lib
             libkrb5
             keyutils
-          ]
-        }
-      }
+          ];
+        };
+      };
     };
   };
 
@@ -82,8 +82,13 @@
     };
   };
 
+#  xdg.portal = {
+ #   enable = true;
+  #  extraPortals = xdg-desktop-portal-gtk;
+  #};
+
   # Enable Flatpak support
-  services.flatpak.enable = true;
+#  services.flatpak.enable = true;
 
   # FIXME: Add the rest of your current configuration
 
