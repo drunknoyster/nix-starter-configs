@@ -14,7 +14,7 @@
     #./gnome.nix
     ./neovim.nix
     ./hyprland-config.nix
-    #./vivaldiwayland.nix
+    ./vivaldi-wayland.nix
   ];
 
   nixpkgs = {
