@@ -67,7 +67,7 @@
   environment.variables.EDITOR = "nvim";
 
   environment.systemPackages = with pkgs; [
-    git gitFull wget openrazer-daemon polychromatic nvidia-vaapi-driver libva1 libvdpau-va-gl driversi686Linux.libvdpau-va-gl bitwarden p7zip vivaldi libsecret steamtinkerlaunch
+    git gitFull wget openrazer-daemon polychromatic nvidia-vaapi-driver libva1 libvdpau-va-gl driversi686Linux.libvdpau-va-gl bitwarden p7zip vivaldi libsecret steamtinkerlaunch kotatogram-dekstop bottles lutris betterdiscord-installer cider mangohud
   ];
 
   nix = {
