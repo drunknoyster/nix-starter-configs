@@ -56,7 +56,14 @@
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
-  programs.git.enable = true;
+  programs.git = {
+    enable = true;
+    userName = "drunknoyster"
+    userEmail = "jbeauter@protonmail.com"
+    extraConfig = {
+      credential.helper = "${pkgs.gitAndTools.gitFull}/bin/git-credential-libsecret";
+    };
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

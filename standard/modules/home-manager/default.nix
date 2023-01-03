@@ -4,5 +4,5 @@
 {
   # List your module files here
   # my-module = import ./my-module.nix;
-  vscode = import ./vscode.nix;  
+  #vscode = import ./vscode.nix;  
 }
