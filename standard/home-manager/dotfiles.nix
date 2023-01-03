@@ -1,0 +1,1 @@
+xdg.configFile.".config".recursive = ./.config;
