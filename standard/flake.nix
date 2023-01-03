@@ -61,8 +61,10 @@
           modules = [
             # > Our main nixos configuration file <
             ./nixos/configuration.nix
-           # hyprland.homeManagerModules.default
-            #{wayland.windowManager.hyprland.enable = true;}
+	    hyprland.nixosModules.default
+	    {programs.hyprland.enable = true;}
+            hyprland.homeManagerModules.default
+            {wayland.windowManager.hyprland.enable = true;}
           ];
         };
       };
