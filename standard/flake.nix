@@ -61,7 +61,17 @@
           modules = [
             # > Our main nixos configuration file <
             ./nixos/configuration.nix
-           # hyprland.homeManagerModules.default
+	    hyprland.nixosModules.default
+	    {programs.hyprland = {
+	       enable = true;
+	       xwayland = {
+	         enable = true;
+		 hidpi = true;
+	       };
+	       nvidiaPatches = true;
+	     };
+	    }
+            #hyprland.homeManagerModules.default
             #{wayland.windowManager.hyprland.enable = true;}
           ];
         };

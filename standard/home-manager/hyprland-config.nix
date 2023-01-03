@@ -1,10 +1,21 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
-programs.hyprland = { # or wayland.windowManager.hyprland
-  enable = true;
-  xwayland = {
-    enable = true;
-    hidpi = true;
-  };
-  nvidiaPatches = true;
- };
+home.packages = with pkgs; [
+  swaylock-effects
+  wl-clipboard
+  dunst
+  jq
+  starship
+  slurp
+  grim
+  tty-clock
+  xdg-desktop-portal-wlr
+  wofi
+  fish
+  kitty
+  rustup
+  cava
+];
 }
+  
+
+
