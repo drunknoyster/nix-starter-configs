@@ -14,7 +14,7 @@
     # ./nvim.nix
     #./gnome.nix
     ./neovim.nix
-    #./hyprland-config.nix
+    ./hyprland-config.nix
     ./vivaldi-wayland.nix
   ];
 
