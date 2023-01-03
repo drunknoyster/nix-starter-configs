@@ -44,6 +44,7 @@
     config = {
       # Disable if you don't want unfree packages
       allowUnfree = true;
+      allowBroken = true;
       packageOverrides = pkgs: {
         steam = pkgs.steam.override {
           extraPkgs = pkgs: with pkgs; [
@@ -67,7 +68,7 @@
   environment.variables.EDITOR = "nvim";
 
   environment.systemPackages = with pkgs; [
-    git gitFull wget openrazer-daemon polychromatic nvidia-vaapi-driver libva1 libvdpau-va-gl driversi686Linux.libvdpau-va-gl bitwarden p7zip vivaldi libsecret steamtinkerlaunch kotatogram-dekstop bottles lutris betterdiscord-installer cider mangohud
+    git gitFull wget openrazer-daemon polychromatic nvidia-vaapi-driver libva1 libvdpau-va-gl driversi686Linux.libvdpau-va-gl bitwarden p7zip vivaldi libsecret steamtinkerlaunch kotatogram-desktop bottles lutris betterdiscord-installer cider mangohud linuxKernel.packages.linux_zen.zfs zfs
   ];
 
   nix = {
