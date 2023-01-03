@@ -7,9 +7,8 @@
         "--ozone-platform=wayland"
         ];
       extensions = with pkgs.vscode-extensions; [
-          dracula-theme.theme.dracula
+          dracula-theme.theme-dracula
           bbenoist.nix
-
       ];
   };
 }
