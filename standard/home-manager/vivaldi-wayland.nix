@@ -1,6 +1,6 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
-programs
- vivaldi = {
+programs.vivaldi = {
+    enable = true;
     commandLineArgs = [
         "--use-gl=desktop"
         "--enable-feautres=VaapiVideoEncoder,VaapiVideoDecoder,CanvasOopRasterization"
