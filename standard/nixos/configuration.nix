@@ -8,7 +8,7 @@
     # outputs.nixosModules.example
     outputs.nixosModules.nvidia
     outputs.nixosModules.steam
-    outputs.nixosModules.hyprland
+    #outputs.nixosModules.hyprland
     outputs.nixosModules.openrazer
     outputs.nixosModules.plasma
     #outputs.nixosModules.gnome

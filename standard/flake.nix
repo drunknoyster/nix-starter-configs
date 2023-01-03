@@ -8,7 +8,7 @@
     # Home manager
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    hyprland.url = "github.hyprwm/Hyprland";
+    hyprland.url = "github:hyprwm/Hyprland";
 
     # TODO: Add any other flake you might need
     # hardware.url = "github:nixos/nixos-hardware";
@@ -61,6 +61,8 @@
           modules = [
             # > Our main nixos configuration file <
             ./nixos/configuration.nix
+            hyprland.homeManagerModules.default
+            {wayland.windowManager.hyprland.enable = true;}
           ];
         };
       };
