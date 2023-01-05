@@ -62,7 +62,7 @@
             # > Our main nixos configuration file <
             ./nixos/configuration.nix
 	    hyprland.nixosModules.default
-	    {wayland.windowManager.hyprland = {
+	    {programs.hyprland = {
 	       enable = true;
 	       xwayland = {
 	         enable = true;
