@@ -20,14 +20,13 @@
          fsType = "vfat";
        };
 
-   #swapDevices =
-   #[ { device = "dev/disk/by-uuid/e4420d2d-5054-4815-8826-efa011afd93a"; };
-   #];
+   swapDevices =
+   [ { device = "dev/disk/by-uuid/cf7aaccd-ba5e-412b-87ad-8152c0476752"; }
+   ];
 
    networking.useDHCP = lib.mkDefault true;
 
    nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
    powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
-
    hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

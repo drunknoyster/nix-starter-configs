@@ -112,6 +112,9 @@
   # Select and install a linux kernel
   boot.kernelPackages = pkgs.linuxPackages_zen;
   
+  # Import ZFS pools on boot
+  boot.zfs.extraPools = [ "zfs-pool-TeamGroupSSD" "zfs-pool-HGST4TB" "zfs-pool-850EVO" ];
+
   # Enable ZFS Services
   #services.zfs.autoScrub.enable = true;
   #services.zfs.trim.enable = true;
