@@ -11,6 +11,7 @@
     #outputs.nixosModules.hyprland
     outputs.nixosModules.openrazer
     outputs.nixosModules.plasma
+    outputs.nixosModules.zfs
     #outputs.nixosModules.gnome
     # Or modules from other flakes (such as nixos-hardware):
     # inputs.hardware.nixosModules.common-cpu-amd

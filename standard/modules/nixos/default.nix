@@ -10,4 +10,5 @@
   plasma = import ./plasma.nix;
   gnome = import ./gnome.nix;
   openrazer = import ./openrazer.nix;
+  zfs = import ./zfs.nix;
 }
