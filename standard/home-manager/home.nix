@@ -67,7 +67,10 @@
 
   # /home/<youruser>/.config managed by home-manager
   # Source is within ../home-manager/.config
-  #xdg.configFile.".config".recursive = ./.config;
+  xdg.configFile."" = {
+    source = ./.config;
+    recursive = true;
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
