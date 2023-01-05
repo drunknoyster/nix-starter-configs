@@ -14,6 +14,7 @@ home.packages = with pkgs; [
   kitty
   rustup
   cava
+  waybar
 ];
 }
   

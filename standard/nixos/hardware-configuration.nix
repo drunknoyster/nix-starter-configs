@@ -10,6 +10,28 @@
    boot.kernelModules = [ "kvm-intel" ];
    boot.extraModulePackages = [ ];
 
+   fileSystems."/mnt/WDBlackSSD" =
+     { device = "/dev/disk/by-uuid/70aede78-ab6e-4ec8-917f-a9e553437e16";
+       fsType = "btrfs";
+       options = [
+         "defaults"
+         "compress=zstd"
+       ];
+     };
+
+   fileSystems."/mnt/WDBlack" =
+     { device = "/dev/disk/by-uuid/01D8238D7B747420";
+       fsType = "ntfs3";
+       options = [
+         "uid=1000"
+         "gid=1000"
+         "rw"
+         "user"
+         "exec"
+         "umask=000"
+       ];
+     };
+
    fileSystems."/" =
      { device = "/dev/disk/by-uuid/bdb10d13-e7f8-4551-af7b-55c808b41b3f";
        fsType = "ext4";
