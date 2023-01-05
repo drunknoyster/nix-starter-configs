@@ -21,7 +21,7 @@
        };
 
    swapDevices =
-   [ { device = "dev/disk/by-uuid/cf7aaccd-ba5e-412b-87ad-8152c0476752"; }
+   [ { device = "/dev/disk/by-uuid/cf7aaccd-ba5e-412b-87ad-8152c0476752"; }
    ];
 
    networking.useDHCP = lib.mkDefault true;
