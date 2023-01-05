@@ -2,13 +2,6 @@
   services.xserver = {
     displayManager = {
       sddm.enable = true;
-      #session = [
-      #  {
-       # manage = "desktop";
-       # name = "Hyprland (nVidia)";
-       # start = "exec wrappedh1";
-       # }
-      #];
     };
     desktopManager = {
       plasma5 = {

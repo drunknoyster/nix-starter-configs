@@ -15,6 +15,12 @@ home.packages = with pkgs; [
   rustup
   cava
   waybar
+  xfce.thunar
+  xfce.thunar-volman
+  xfce.thunar-archive-plugin
+  gvfs
+  gtk-layer-shell
+  libappindicator-gtk3
 ];
 }
   

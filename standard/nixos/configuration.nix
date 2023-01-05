@@ -10,9 +10,9 @@
     outputs.nixosModules.steam
     #outputs.nixosModules.hyprland
     outputs.nixosModules.openrazer
-    outputs.nixosModules.plasma
+    #outputs.nixosModules.plasma
     outputs.nixosModules.zfs
-    #outputs.nixosModules.gnome
+    outputs.nixosModules.gnome
     # Or modules from other flakes (such as nixos-hardware):
     # inputs.hardware.nixosModules.common-cpu-amd
     # inputs.hardware.nixosModules.common-ssd
@@ -69,7 +69,7 @@
   environment.variables.EDITOR = "nvim";
 
   environment.systemPackages = with pkgs; [
-    git gitFull wget openrazer-daemon polychromatic nvidia-vaapi-driver libva1 libvdpau-va-gl driversi686Linux.libvdpau-va-gl bitwarden p7zip vivaldi libsecret steamtinkerlaunch kotatogram-desktop bottles lutris gtkcord4 cider mangohud linuxKernel.packages.linux_zen.zfs zfs
+    git gitFull wget openrazer-daemon polychromatic nvidia-vaapi-driver libva1 libvdpau-va-gl driversi686Linux.libvdpau-va-gl bitwarden p7zip vivaldi libsecret steamtinkerlaunch kotatogram-desktop bottles lutris gtkcord4 cider mangohud linuxKernel.packages.linux_zen.zfs zfs gawk ripgrep unzip xdotool xorg.xprop xorg.xrandr xorg.xwininfo yad
   ];
 
   nix = {
@@ -95,7 +95,7 @@
   #};
 
   # Enable Flatpak support
-#  services.flatpak.enable = true;
+  services.flatpak.enable = true;
 
   # FIXME: Add the rest of your current configuration
 
