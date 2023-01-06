@@ -10,5 +10,9 @@ environment.sessionVariables = rec {
 environment.systemPackages = with pkgs; [
     gamescope
     gamemode
+    winetricks
+    steamtinkerlaunch
+    mangohud
+
 ];
 }

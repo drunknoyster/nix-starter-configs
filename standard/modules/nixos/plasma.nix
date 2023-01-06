@@ -21,5 +21,16 @@
     lightly-qt
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
+    kde-rounded-corners
+    mpv
+    python310Packages.websockets
+    python310Packages.websockify
+    libsForQt5.plasma-framework
+    gst_all_1.gst-libav
+    libsForQt5.qt5.qtdeclarative
+    libsForQt5.qt5.qtwebsockets
+    libsForQt5.qt5.qtwebchannel
+    vulkan-headers
+    cmake
   ];
 }
