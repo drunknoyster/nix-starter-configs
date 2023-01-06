@@ -11,5 +11,4 @@
   gnome = import ./gnome.nix;
   openrazer = import ./openrazer.nix;
   zfs = import ./zfs.nix;
-  lxqt = import ./lxqt.nix;
 }
