@@ -17,5 +17,9 @@
     ark
     kate
     kcalc
+    latte-dock
+    lightly-qt
+    libsForQt5.qt5ct
+    libsForQt5.qtstyleplugin-kvantum
   ];
 }

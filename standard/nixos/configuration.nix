@@ -70,7 +70,7 @@
   environment.variables.EDITOR = "nvim";
 
   environment.systemPackages = with pkgs; [
-    git gitFull wget openrazer-daemon polychromatic nvidia-vaapi-driver libva1 libvdpau-va-gl driversi686Linux.libvdpau-va-gl bitwarden p7zip vivaldi libsecret steamtinkerlaunch kotatogram-desktop bottles lutris discord cider mangohud linuxKernel.packages.linux_zen.zfs zfs gawk ripgrep unzip xdotool xorg.xprop xorg.xrandr xorg.xwininfo yad
+    git gitFull wget openrazer-daemon polychromatic nvidia-vaapi-driver libva1 libvdpau-va-gl driversi686Linux.libvdpau-va-gl bitwarden p7zip vivaldi libsecret steamtinkerlaunch kotatogram-desktop bottles lutris discord cider mangohud linuxKernel.packages.linux_zen.zfs zfs gawk ripgrep unzip xdotool xorg.xprop xorg.xrandr unixtools.xxd xorg.xwininfo yad kitty
   ];
 
   nix = {
@@ -154,8 +154,8 @@
   };
 
   # Change system-wide shell to Fish
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
+  #programs.zsh.enable = true;
+  #users.defaultUserShell = pkgs.zsh;
 
   # This setups a SSH server. Very important if you're setting up a headless system.
   # Feel free to remove if you don't need it.
