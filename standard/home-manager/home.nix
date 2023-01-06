@@ -14,7 +14,7 @@
     # ./nvim.nix
     #./gnome.nix
     ./neovim.nix
-    ./lxqt.nix
+    #./lxqt.nix
     #./hyprland-config.nix
     #./vivaldi-wayland.nix
   ];
@@ -53,7 +53,7 @@
 
   # Add stuff for your user as you see fit:
   #programs.neovim.enable = true;
-  home.packages = with pkgs; [ steamtinkerlaunch gawk ripgrep git unzip wget xdotool xorg.xprop xorg.xrandr unixtools.xxd xorg.xwininfo yad ];
+  home.packages = with pkgs; [ steamtinkerlaunch gawk ripgrep git unzip wget xdotool xorg.xprop xorg.xrandr unixtools.xxd xorg.xwininfo yad lightly ];
 
   # Enable home-manager and git
   programs.home-manager.enable = true;

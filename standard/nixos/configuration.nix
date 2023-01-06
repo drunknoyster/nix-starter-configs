@@ -10,7 +10,7 @@
     outputs.nixosModules.steam
     #outputs.nixosModules.hyprland
     outputs.nixosModules.openrazer
-    #outputs.nixosModules.plasma
+    outputs.nixosModules.plasma
     outputs.nixosModules.zfs
     #outputs.nixosModules.gnome
     #outputs.nixosModules.lxqt
