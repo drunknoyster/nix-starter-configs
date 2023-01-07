@@ -70,7 +70,7 @@
   environment.variables.EDITOR = "nvim";
 
   environment.systemPackages = with pkgs; [
-    git gitFull wget openrazer-daemon polychromatic nvidia-vaapi-driver libva1 libvdpau-va-gl driversi686Linux.libvdpau-va-gl bitwarden p7zip vivaldi libsecret kotatogram-desktop bottles lutris discord cider linuxKernel.packages.linux_zen.zfs zfs gawk ripgrep unzip xdotool xorg.xprop xorg.xrandr unixtools.xxd xorg.xwininfo yad kitty gwe
+    git gitFull wget openrazer-daemon polychromatic nvidia-vaapi-driver libva1 libvdpau-va-gl driversi686Linux.libvdpau-va-gl bitwarden p7zip vivaldi libsecret kotatogram-desktop bottles lutris cider linuxKernel.packages.linux_zen.zfs zfs gawk ripgrep unzip xdotool xorg.xprop xorg.xrandr unixtools.xxd xorg.xwininfo yad kitty gwe
   ];
 
   nix = {
