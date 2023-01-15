@@ -66,10 +66,10 @@
 	       enable = true;
 	       xwayland = {
 	         enable = true;
-		 hidpi = true;
+		   hidpi = true;
 	       };
 	       nvidiaPatches = true;
-	     };
+	       };
 	    }
             #hyprland.homeManagerModules.default
             #{wayland.windowManager.hyprland.enable = true;}

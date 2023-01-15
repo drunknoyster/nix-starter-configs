@@ -4,20 +4,20 @@ services.xserver = {
   desktopManager = {
     gnome = {
       enable = true;
-      excludePackages = (with pkgs; [
-        gnome-tour ])
-     ++ (with pkgs.nome; [
-        cheese
-        gnome-music
-        gedit
-        epiphany
-        geary
-        totem
-        tali
-        iagno
-        hitori
-        atomix
-        ]);
+  #    excludePackages = (with pkgs; [
+   #     gnome-tour ])
+    # ++ (with pkgs.gnome; [
+     #   cheese
+      #  gnome-music
+       # gedit
+        #epiphany
+        #geary
+        #totem
+        #tali
+        #iagno
+        #hitori
+        #atomix
+        #]);
     };
   };
 };
