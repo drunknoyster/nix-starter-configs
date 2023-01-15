@@ -2,12 +2,17 @@
   description = "NixOS + standalone home-manager config flakes to get you started!";
   outputs = inputs: {
     templates = {
-      standard = {
+      desktop = {
         description = ''
-          Standard flake - augmented with boilerplate for custom packages, overlays, and reusable modules.
-          Perfect migration path for when you want to dive a little deeper.
+          Desktop flake - setup w/ home-manager, flakes, and dotfile configurations. Tailored to Custom built PC.
         '';
-        path = ./standard;
+        path = ./desktop;
+      };
+      framework = {
+        description = ''
+          Framework flake - Setup w/ home-manager and flakes integration. Specifically configured for Alder Lake Frame.work laptop.
+        '';
+        path = ./framework;
       };
     };
   };
